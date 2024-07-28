@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaCadastroUsuario"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#fff">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastro"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        android:textColor="#212121"/>
+
+    <EditText
+        android:id="@+id/edit_nome_usuario"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:hint="Nome"
+        android:padding="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#212121"
+        android:textColorHint="#212121"/>
+    <EditText
+        android:id="@+id/edit_email_usuario"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:hint="Email"
+        android:padding="15dp"
+        android:textColor="#212121"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="15dp"
+        android:textColorHint="#212121"/>
+    <EditText
+        android:id="@+id/edit_telefone_usuario"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:hint="Telefone"
+        android:padding="15dp"
+        android:inputType="phone"
+        android:layout_marginTop="15dp"
+        android:textColorHint="#212121"
+        android:textColor="#212121"/>
+    <EditText
+        android:id="@+id/edit_senha_usuario"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:hint="Senha"
+        android:padding="15dp"
+        android:inputType="textPassword"
+        android:layout_marginTop="15dp"
+        android:textColorHint="#212121"
+        android:textColor="#212121"/>
+    <EditText
+        android:id="@+id/edit_conf_senha_usuario"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:hint="Confirmar Senha"
+        android:padding="10dp"
+        android:textColorHint="#212121"
+        android:inputType="textPassword"
+        android:layout_marginTop="15dp"
+        android:textColor="#212121"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_criar_usuario"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn2"
+        android:text="Criar uma conta"
+        android:layout_marginTop="25dp"
+        android:textColor="#fff"/>
+
+
+</LinearLayout>

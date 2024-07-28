@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "907331640024",
+    "project_id": "meus-livros-89a74",
+    "storage_bucket": "meus-livros-89a74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907331640024:android:90a0a293a5874613a315ad",
+        "android_client_info": {
+          "package_name": "com.bunamiranda.meuslivros"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3lePN5535Bmyo1yAXFxF1HMATwXsyHZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

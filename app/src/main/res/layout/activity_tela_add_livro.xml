@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaAddLivro"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <EditText
+        android:id="@+id/edit_Titulo"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:hint="Título do livro"
+        android:padding="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#212121"
+        android:textColorHint="#212121"/>
+
+    <EditText
+        android:id="@+id/edit_AnoPublicacao"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:hint="Ano publicação"
+        android:padding="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#212121"
+        android:textColorHint="#212121"/>
+    <EditText
+        android:id="@+id/edit_NumPaginas"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:hint="Páginas"
+        android:padding="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#212121"
+        android:textColorHint="#212121"/>
+    <EditText
+        android:id="@+id/edit_Editora"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:hint="Editora"
+        android:padding="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#212121"
+        android:textColorHint="#212121"/>
+    <EditText
+        android:id="@+id/edit_Autores"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:hint="Autores"
+        android:padding="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#212121"
+        android:textColorHint="#212121"/>
+    <EditText
+        android:id="@+id/edit_isbn"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:hint="ISBN"
+        android:padding="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#212121"
+        android:textColorHint="#212121"/>
+
+    <EditText
+        android:id="@+id/edit_Descricao"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:hint="Descrição"
+        android:padding="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#212121"
+        android:inputType="textLongMessage"
+        android:textColorHint="#212121"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_SalvarLivro"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn1"
+        android:text="Salvar"
+        android:layout_marginTop="25dp"
+        android:textColor="#fff"/>
+
+</LinearLayout>
