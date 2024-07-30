@@ -10,6 +10,14 @@
     android:gravity="center"
     android:background="@color/white">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar Livros"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        android:textColor="#212121"/>
+
     <EditText
         android:id="@+id/edit_Titulo"
         android:layout_width="300dp"
@@ -28,7 +36,9 @@
         android:padding="15dp"
         android:layout_marginTop="15dp"
         android:textColor="#212121"
-        android:textColorHint="#212121"/>
+        android:textColorHint="#212121"
+        android:inputType="numberDecimal"
+        android:maxLines="1"/>
     <EditText
         android:id="@+id/edit_NumPaginas"
         android:layout_width="300dp"
@@ -37,7 +47,9 @@
         android:padding="15dp"
         android:layout_marginTop="15dp"
         android:textColor="#212121"
-        android:textColorHint="#212121"/>
+        android:textColorHint="#212121"
+        android:inputType="numberDecimal"
+        android:maxLines="1"/>
     <EditText
         android:id="@+id/edit_Editora"
         android:layout_width="300dp"
@@ -46,7 +58,8 @@
         android:padding="15dp"
         android:layout_marginTop="15dp"
         android:textColor="#212121"
-        android:textColorHint="#212121"/>
+        android:textColorHint="#212121"
+        android:maxLines="2"/>
     <EditText
         android:id="@+id/edit_Autores"
         android:layout_width="300dp"
@@ -64,7 +77,9 @@
         android:padding="15dp"
         android:layout_marginTop="15dp"
         android:textColor="#212121"
-        android:textColorHint="#212121"/>
+        android:textColorHint="#212121"
+        android:inputType="numberDecimal"
+        android:maxLines="1"/>
 
     <EditText
         android:id="@+id/edit_Descricao"
@@ -75,7 +90,24 @@
         android:layout_marginTop="15dp"
         android:textColor="#212121"
         android:inputType="textLongMessage"
-        android:textColorHint="#212121"/>
+        android:textColorHint="#212121"
+        android:maxLines="10"/>
+
+    <ImageView
+        android:id="@+id/img_Livro"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="Imagem do livro" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_SelecionarImagem"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn1"
+        android:text="Selecionar Imagem"
+        android:layout_marginTop="15dp"
+        android:textColor="#fff"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_SalvarLivro"

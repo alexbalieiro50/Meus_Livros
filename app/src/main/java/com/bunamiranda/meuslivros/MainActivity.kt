@@ -7,7 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import com.bunamiranda.meuslivros.adapter.AdapterLivros
 import com.bunamiranda.meuslivros.databinding.ActivityMainBinding
 import com.bunamiranda.meuslivros.model.Livro
@@ -38,10 +38,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         val recyclerViewLivros = binding.recyclerViewLivros
-        recyclerViewLivros.layoutManager = LinearLayoutManager(this)
+        recyclerViewLivros.layoutManager = GridLayoutManager(this, 2)
         recyclerViewLivros.setHasFixedSize(true)
         adapterLivros = AdapterLivros(this, listaLivros) { livro ->
-            val intent = Intent(this, TelaEditarLivro::class.java).apply {
+            val intent = Intent(this, TelaLIvroInformation::class.java).apply {
                 putExtra("livro", livro)
             }
             startActivity(intent)

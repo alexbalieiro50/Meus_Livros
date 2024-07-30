@@ -10,6 +10,14 @@
     android:gravity="center"
     android:background="@color/white">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atualizar"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        android:textColor="#212121"/>
+
     <EditText
         android:id="@+id/edit_Atualizar_Titulo"
         android:layout_width="300dp"
@@ -76,6 +84,23 @@
         android:textColorHint="#212121"
         android:inputType="textLongMessage"/>
 
+    <ImageView
+        android:id="@+id/img_Livro_atualizar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerCrop"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_SelecionarNovaImagem"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn1"
+        android:text="Selecionar Imagem"
+        android:layout_marginTop="15dp"
+        android:textColor="#fff"/>
+
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_AtualizarLivro"
         android:layout_width="150dp"
@@ -84,4 +109,14 @@
         android:text="Atualizar"
         android:layout_marginTop="25dp"
         android:textColor="#fff"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        android:layout_marginTop="8dp"
+        android:indeterminateTint="#212121"/>
 </LinearLayout>

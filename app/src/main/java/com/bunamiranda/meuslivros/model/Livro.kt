@@ -6,15 +6,17 @@ import android.os.Parcelable
 
 data class Livro(
     var id: String = "",
-    val titulo: String = "",
-    val autores: String = "",
-    val anoPublicacao: String = "",
-    val numPaginas: String = "",
-    val editora: String = "",
-    val isbn: String = "",
-    val descricao: String = ""
+    var titulo: String = "",
+    var autores: String = "",
+    var anoPublicacao: String = "",
+    var numPaginas: String = "",
+    var editora: String = "",
+    var isbn: String = "",
+    var descricao: String = "",
+    var imagemUrl: String = ""
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
+        parcel.readString() ?: "",
         parcel.readString() ?: "",
         parcel.readString() ?: "",
         parcel.readString() ?: "",
@@ -34,6 +36,7 @@ data class Livro(
         parcel.writeString(editora)
         parcel.writeString(isbn)
         parcel.writeString(descricao)
+        parcel.writeString(imagemUrl)
     }
 
     override fun describeContents(): Int {

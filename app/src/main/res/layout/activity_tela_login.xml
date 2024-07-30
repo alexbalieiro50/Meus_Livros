@@ -73,6 +73,16 @@
             android:layout_marginTop="15dp"
             android:textColor="#fff"/>
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            android:layout_marginTop="8dp"
+            android:indeterminateTint="@color/white"/>
+
 
     </LinearLayout>
 

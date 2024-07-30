@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start|bottom"
         android:layout_margin="16dp"
-        app:backgroundTint="@color/white"
+        app:backgroundTint="#7ACBCD"
         app:tint="@android:color/black"
         android:src="@drawable/ic_add"/>
 

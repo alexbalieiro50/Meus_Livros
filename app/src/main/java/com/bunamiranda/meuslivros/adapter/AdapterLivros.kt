@@ -2,11 +2,11 @@ package com.bunamiranda.meuslivros.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bunamiranda.meuslivros.databinding.ItemLivroBinding
 import com.bunamiranda.meuslivros.model.Livro
+import com.bumptech.glide.Glide
 import com.google.firebase.firestore.FirebaseFirestore
 
 class AdapterLivros(
@@ -38,9 +38,11 @@ class AdapterLivros(
             binding.root.setOnClickListener {
                 onItemClick(livro)
             }
-            binding.btnDelete.setOnClickListener {
-                deleteLivro(livro)
-            }
+
+            // Carregar a imagem usando Glide
+            Glide.with(context)
+                .load(livro.imagemUrl)
+                .into(binding.fotoLivro)
         }
 
         private fun deleteLivro(livro: Livro) {

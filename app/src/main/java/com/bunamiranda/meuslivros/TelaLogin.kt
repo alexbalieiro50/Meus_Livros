@@ -8,6 +8,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import com.bunamiranda.meuslivros.databinding.ActivityTelaLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -39,9 +41,11 @@ class TelaLogin : AppCompatActivity() {
 
             if (email.isEmpty() || senha.isEmpty()) {
                 Toast.makeText(this, "Por favor, preencha todos os campos.", Toast.LENGTH_SHORT).show()
+                binding.progressBar.isInvisible = true
                 return@setOnClickListener
             }
 
+            binding.progressBar.isVisible = true // Mostrar ProgressBar
             loginUsuario(email, senha)
         }
 
@@ -53,6 +57,7 @@ class TelaLogin : AppCompatActivity() {
     private fun loginUsuario(email: String, senha: String) {
         auth.signInWithEmailAndPassword(email, senha)
             .addOnCompleteListener(this) { task ->
+                binding.progressBar.isInvisible = true // Esconder ProgressBar
                 if (task.isSuccessful) {
                     val user = auth.currentUser
                     val userId = user?.uid
@@ -62,7 +67,7 @@ class TelaLogin : AppCompatActivity() {
                             .get()
                             .addOnSuccessListener { document ->
                                 if (document.exists()) {
-                                    // Usuário existe no Firestore, navegar para a TelaUsuario
+                                    // Usuário existe no Firestore, navegar para a MainActivity
                                     val intent = Intent(this, MainActivity::class.java)
                                     startActivity(intent)
                                     finish()
